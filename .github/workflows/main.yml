@@ -47,9 +47,8 @@ jobs:
         run: docker build -f Dockerfile -t myapp:latest .
 
       - name: Docker Scout Scan
-    uses: docker/scout-action@v1.0.9
-  with:
-    dockerhub-user: ${{ secrets.USER }}
-    dockerhub-password: ${{ secrets.PWD }}
-    command: quickview,cves
-
+        uses: docker/scout-action@v1.0.9
+        with:
+          dockerhub-user: ${{ secrets.USER }}
+          dockerhub-password: ${{ secrets.PWD }}
+          command: quickview,cves
