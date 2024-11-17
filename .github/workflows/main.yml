@@ -52,3 +52,5 @@ jobs:
           dockerhub-user: ${{ secrets.USER }}
           dockerhub-password: ${{ secrets.PWD }}
           command: quickview,cves
+        env:
+          DOCKER_SCOUT_CACHE_FORMAT: tar
